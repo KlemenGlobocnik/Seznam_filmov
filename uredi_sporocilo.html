@@ -1,0 +1,22 @@
+{% extends "baseguestbook.html" %}
+
+{% block title %}Posamezno sporocilo{% endblock title %}
+
+{% block specifika %}
+    <form action="/sporocilo/{{ movie.key.id() }}/uredi" method="post">
+            Name:<br>
+            <input name="name" value="{{ movie.name }}">
+            <br>
+            Score:<br>
+            <input name="score" value="{{ movie.score }}">
+            <br>
+            Url:<br>
+            <input name="url" value="{{ movie.url }}">
+            <br>
+            Image_url:<br>
+            <input name="image_url" value="{{ movie.image_url }}">
+            <br>
+            <button type="submit" class="myButton">OK</button>
+    </form>
+
+{% endblock specifika %}

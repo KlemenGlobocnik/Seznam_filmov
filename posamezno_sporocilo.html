@@ -1,0 +1,14 @@
+{% extends "baseguestbook.html" %}
+
+{% block title %}Posamezno sporocilo{% endblock title %}
+
+{% block specifika %}
+    <h1>Movie</h1>
+
+    <p>Name: {{ movie.name }}</p>
+    <p>Score: {{ movie.score }}</p>
+    <p>Url: {{ movie.url }}</p>
+    <p>Image_url: {{ movie.image_url }}</p>
+    <a href="/sporocilo/{{ movie.key.id() }}/uredi">Edit</a>
+    <a href="/sporocilo/{{ movie.key.id() }}/izbrisi">Delete</a>
+{% endblock specifika %}

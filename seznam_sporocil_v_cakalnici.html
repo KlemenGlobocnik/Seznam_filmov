@@ -1,0 +1,12 @@
+{% extends "baseguestbook.html" %}
+
+{% block title %}Seznam sporocil{% endblock title %}
+
+{% block specifika %}
+            <h1>List of deleted guests</h1>
+    
+            {% for movie in movieslist %}
+            <p><a href="/sporocilo1/{{ movie.key.id() }}">{{ movie.name }}, {{ movie.score }}, {{ movie.url }}, {{ movie.image_url }}, {{ movie.created }}, {{ movie.deleted }}, {{ movie.key.id() }}</a></p>
+            {% endfor %}
+
+{% endblock specifika %}

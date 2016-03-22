@@ -1,0 +1,12 @@
+{% extends "baseguestbook.html" %}
+
+{% block title %}Vnosna stran{% endblock title %}
+
+{% block specifika %}
+
+<h1>The following data have been uploaded:</h1>
+<p>Name: {{ movieslist.name }}</p>
+<p>Score: {{ movieslist.score }}</p>
+<p>Url: {{ movieslist.url }}</p>
+<p>Image_Url: {{ movieslist.image_url }}</p>
+{% endblock specifika %}

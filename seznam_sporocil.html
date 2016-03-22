@@ -1,0 +1,23 @@
+{% extends "baseguestbook.html" %}
+
+{% block title %}List of movies{% endblock title %}
+
+{% block specifika %}
+            <h1>List of movies</h1>
+            <table border="1">
+             <tr>
+                <th>Name</th>
+                <th>Score</th>
+                <th>Url</th>
+                <th>Image_url</th>
+                <th>Created</th>
+                <th>Deleted</th>
+                <th>Key</th>
+            </tr>
+            {% for movie in movieslist %}
+            <tr>
+            <td><a href="/sporocilo/{{ movie.key.id() }}">{{ movie.name }}</a></td><td>{{ movie.score }}</td><td><a href="{{ movie.url }}">{{ movie.url }}</a></td><td><img src="{{ movie.image_url }}" alt="No saved picture." style="width:60px;height:60px;"></td><td>{{ movie.created }}</td><td>{{ movie.deleted }}</td><td>{{ movie.key.id() }}</td>
+            </tr>
+            {% endfor %}
+            </table>
+            {% endblock specifika %}
